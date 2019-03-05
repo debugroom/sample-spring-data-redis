@@ -1,0 +1,8 @@
+spring:
+  session:
+    store-type: redis
+  redis:
+    host: ${REDIS_PORT_6379_TCP_ADDR:localhost}
+    port: ${REDIS_PORT_6379_TCP_PORT:6379}
+app:
+  host: ${APSERVER_PORT_8080_TCP_ADDR:localhost}
