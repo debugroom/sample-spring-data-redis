@@ -12,7 +12,7 @@ RUN wget http://repos.fedorapeople.org/repos/dchen/apache-maven/epel-apache-mave
 RUN sed -i s/\$releasever/6/g /etc/yum.repos.d/epel-apache-maven.repo
 RUN yum install -y apache-maven
 ENV JAVA_HOME /etc/alternatives/jre
-RUN git clone https://github.com/debugroom/sample-spring-data-redis.git /var/local/sampe-spring-data-redis
+RUN git clone https://github.com/debugroom/sample-spring-data-redis.git /var/local/sample-spring-data-redis
 RUN mvn install -f /var/local/sample-spring-data-redis/pom.xml
 
 RUN cp /etc/localtime /etc/localtime.org
